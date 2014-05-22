@@ -14,17 +14,24 @@ public class ExaltedRESTService {
 
 	@GET
 	@Produces("application/json")
-	@Path("/getchar/json")
-	public ExaltedCharacterResponse getCharacterJSON(@QueryParam("char") String name){
+	@Path("/getchar")
+	public ExaltedCharacterResponse getCharacterJSON(@QueryParam("name") String name){
 		return new ExaltedCharacterResponse(ExaltedRESTServiceImplementation.getCharacter(name));
 	}
 
 	@POST
 	@Consumes("application/json")
 	@Produces("application/json")
-	@Path("/getchar/jsonpost")
+	@Path("/postchar")
 	public ExaltedCharacterResponse getRateJSONPOST(ExaltedCharacterRequest characterPost) {
 		return new ExaltedCharacterResponse(ExaltedRESTServiceImplementation.postCharacter(characterPost));
+	}
+	
+	@GET
+	@Produces("application/json")
+	@Path("/postchardummy")
+	public ExaltedCharacterResponse getRateJSONPOSTDummy(@QueryParam("name") String name) {
+		return new ExaltedCharacterResponse(ExaltedRESTServiceImplementation.postCharacterDummy(name));
 	}
 
 	// Main method that publishes this class as a web service at the given URL
@@ -33,8 +40,9 @@ public class ExaltedRESTService {
 	public static void main(String[] args) throws IllegalArgumentException, IOException {
 		HttpServerFactory.create(SERVICEURL).start();
 		System.out.println("Listening for requests at address " + SERVICEURL);
-		System.out.println("WADL can be found at " + SERVICEURL + "/application.wadl");
 		System.out.println("Test with for example:");
-		System.out.println(SERVICEURL + "/exalted/getchar/json?name=USD");
+		System.out.println(SERVICEURL + "/exalted/getchar?name=NAMEBEHERE");
+		System.out.println(SERVICEURL + "/exalted/postchardummy?name=NAMEBEHERE");
+		System.out.println(SERVICEURL + "/exalted/postchar");
 	}
 }
