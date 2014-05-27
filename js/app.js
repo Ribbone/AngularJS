@@ -1,6 +1,6 @@
 /* App Module */
 
-var exaltedApp = angular.module('exaltedApp', ['ngRoute','exaltedAppController']);
+var exaltedApp = angular.module('exaltedApp', ['ngRoute','ngResource','exaltedAppController','exaltedAppServices']);
 
 exaltedApp.config(['$routeProvider',
   function($routeProvider) {

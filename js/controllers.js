@@ -1,14 +1,15 @@
 /* Controllers */
 
 
-var exaltedAppController = angular.module('exaltedAppController', []);
+var exaltedAppController = angular.module('exaltedAppController', ['exaltedAppServices']);
 
-exaltedAppController.controller('hahmoController', ['$scope',
-  function($scope) {
-    $scope.character = [
-		{name: 'Fitexi', surname: 'Dobati', playerName: 'Risto', playerSurname: 'Turtiainen', characterConsept: 'Warleader', motivation:'Artifacts', caste: 'Solar', anima:'Dawn'},
-	]
-  }]);
+exaltedAppController.controller('hahmoController', function($scope, myService) {
+	document.domain = "185.17.252.40";
+	myService.getFoos().then(function(foos) {
+        $scope.character = foos.exaltedCharacter;
+    });
+	
+  });
 
   exaltedAppController.controller('welcomeController', ['$scope',
   function($scope) {
