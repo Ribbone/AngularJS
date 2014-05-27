@@ -11,10 +11,14 @@ import javax.xml.bind.JAXBException;
 
 public class ExaltedRESTServiceImplementation {
 
-	private static Map<String, ExaltedCharacter> characterCache = new HashMap<String, ExaltedCharacter>();
-	private final static String filepath = "data/";
+	private Map<String, ExaltedCharacter> characterCache = new HashMap<String, ExaltedCharacter>();
+	private String filepath = "data/";
 	
-	public static ExaltedCharacter getCharacter(String name) {
+	public ExaltedRESTServiceImplementation(String datafilepath) {
+		this.filepath = datafilepath;
+	}
+
+	public ExaltedCharacter getCharacter(String name) {
 		if(characterCache.containsKey(name)){
 			System.out.println("Read " + name + " from cache.");
 			return characterCache.get(name);
@@ -36,7 +40,7 @@ public class ExaltedRESTServiceImplementation {
 		return character;
 	}
 
-	public static ExaltedCharacter postCharacter(ExaltedCharacterRequest characterRequest) {
+	public ExaltedCharacter postCharacter(ExaltedCharacterRequest characterRequest) {
 		if(characterRequest == null || characterRequest.getExaltedCharacter() == null) return null;
 
 		ExaltedCharacter character = characterRequest.getExaltedCharacter();
@@ -54,7 +58,7 @@ public class ExaltedRESTServiceImplementation {
 		return getCharacter(character.name);
 	}
 
-	public static ExaltedCharacter postCharacterDummy(String name) {
+	public ExaltedCharacter postCharacterDummy(String name) {
 		if(name == null) return null;
 		ExaltedCharacter character = new ExaltedCharacter();
 		character.name = name;
@@ -72,7 +76,7 @@ public class ExaltedRESTServiceImplementation {
 		return getCharacter(character.name);
 	}
 
-	private static void writeCharacterToXMLFile(ExaltedCharacter character) throws JAXBException, IOException {
+	private void writeCharacterToXMLFile(ExaltedCharacter character) throws JAXBException, IOException {
 		File f = new File(filepath + character.name + ".xml");
 		ExaltedCharacter ex = character;
 		
@@ -86,7 +90,7 @@ public class ExaltedRESTServiceImplementation {
 		System.out.println("Wrote file " + f.getAbsolutePath());
 	}
 	
-	private static ExaltedCharacter readCharacterFromXMLFile(String characterName) throws JAXBException, IOException {
+	private ExaltedCharacter readCharacterFromXMLFile(String characterName) throws JAXBException, IOException {
 		File f = new File(filepath + characterName + ".xml");
 		FileInputStream is = new FileInputStream(f);;
 		ExaltedCharacter ex = new ExaltedCharacter();
