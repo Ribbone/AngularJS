@@ -8,7 +8,7 @@ exaltedAppServices.factory('myService', function($http) {
         getFoos: function() {
              //return the promise directly.
              return $http.get(SERVICEURL + 'getchar?name=NAMEBEHERE')
-				.then(function(result) {
+                    .then(function(result) {
 				        //resolve the promise as the data
 				    return result.data;
 				});
