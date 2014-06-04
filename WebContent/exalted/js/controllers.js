@@ -4,9 +4,20 @@
 var exaltedAppController = angular.module('exaltedAppController', ['exaltedAppServices']);
 
 exaltedAppController.controller('hahmoController', function($scope, myService) {
-	document.domain = "185.17.252.40";
 	myService.getFoos().then(function(foos) {
         $scope.character = foos.exaltedCharacter;
+        $scope.master = $scope.character;
+        
+        $scope.update = function(user) {
+          $scope.master = angular.copy($scope.character);
+        };
+
+        $scope.reset = function() {
+          $scope.character = angular.copy($scope.master);
+        };
+
+        $scope.reset();
+      
     });
 	
   });
