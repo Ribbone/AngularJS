@@ -1,3 +1,20 @@
+.characterForm input.ng-invalid.ng-dirty {
+    background-color: #FA787E;
+}
+
+.characterForm input.ng-valid.ng-dirty {
+    background-color: white;
+}
+.characterTable {
+	
+	text-align: left;
+}
+.error 
+{
+	font-size:12px;
+	color: red;
+	text-decoration: italic;
+}
 div#characterSheet
 {
 	<!--background-image: url(../images/solar_exalted_character_sheet.jpg);-->

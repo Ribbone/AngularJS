@@ -3,11 +3,15 @@ Tervetuloa!
 <ul>
 <li ng-repeat="hahmo in hahmot"> {{ hahmo }} {{ hahmo.name }} {{ hahmo.characterClass }} </li>
 </ul>
-<input type="text" ng-model="hahmonNimi" >
-
+<select ng-model="char" ng-options="hahmo.name for hahmo in hahmot"></select><br>
 <br>
 <br>
 <a href="#/hahmolomake">
-    <button>To character sheet!</button>
+    <button ng-click="selectCharacter(char.name)">To character sheet!</button>
+</a>
+<br>
+<br>
+<a href="#/hahmolomake">
+    <button ng-click="newCharacter()">New Character</button>
 </a>
 <div/>

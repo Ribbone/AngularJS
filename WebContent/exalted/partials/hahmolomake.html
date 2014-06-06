@@ -1,32 +1,31 @@
 <div id="characterSheet">
 <div id ="characterName">
-<form novalidate class="character-form">
-<table>
+<form name="characterForm" novalidate>
+<table class="characterTable">
 <tr>
-  <th>Character name: <input type="text" ng-model="character.name"></th>
+  <th>Character name: </th><th> <input type="text" name="characterName" ng-model="character.name" required></th>
+  <th class="error" ng-show="characterForm.characterName.$error.required">Character name is Required!</th>
 </tr>
 <tr>
-  <th>Player name: <input type="text" ng-model="character.player"></th>
+  <th>Player name: </th><th> <input type="text" name ="playerName"ng-model="character.player"required></th>
+<th class="error" ng-show="characterForm.playerName.$error.required">Required!</th>
 </tr>
 <tr>
-  <th>Caste: <input type="text" ng-model="character.caste"></th>
-</tr>
-</table>
-<table>
-<tr>
-  <th>Concept: <input type="text" ng-model="character.concept"></th>
+  <th>Caste: </th><th> <input type="text" name ="characterCaste" ng-model="character.caste"required></th>
+<th class="error" ng-show="characterForm.characterCaste.$error.required">Required!</span></th>
 </tr>
 <tr>
-  <th>Motivation: <input type="text" ng-model="character.motivation"></th>
+  <th>Concept:</th><th> <input type="text" ng-model="character.concept"></th>
 </tr>
 <tr>
-  <th>Anima: <input type="text" ng-model="character.anima"></th>
+  <th>Motivation:</th><th> <input type="text" ng-model="character.motivation"></th>
 </tr>
-</table>
-<table>
-<tr ng-repeat="entry in character.specialities "><th> Name: <input type="text" ng-model="character.specialities.entry.key"></th><th> value: <input type="text" ng-model="character.specialities.entry.value"></th></tr>
-</table>
-<table>
+<tr>
+  <th>Anima:</th><th> <input type="text" ng-model="character.anima"></th>
+</tr>
+<tr ng-repeat="entry in character.specialities ">
+<th> Name: <input type="text" ng-model="character.specialities.entry.key"></th>
+<th> value: <input type="text" ng-model="character.specialities.entry.value"></th></tr>
 <tr ng="weapons in character.weapons"> 
 <th>Weapons name: <input type="text" ng-model="character.weapons.nimi"></th>
 <th>Speed: <input type="text" ng-model="character.weapons.speed"></th>
@@ -38,18 +37,21 @@
 <th>Range: <input type="text" ng-model="character.weapons.range"> </th> 
 </tr>
 <tr ng="armor in character.armor "> 
-<th> Armors name: <input type="text" ng-model=" character.armor.nimi"> </th>
-<th> Soak B <input type="text" ng-model=" character.armor.soakB"> </th>
-<th> Soak L: <input type="text" ng-model=" character.armor.soakL"> </th>
-<th> Hardness B: <input type="text" ng-model=" character.armor.hardnessB"> </th>
+<th>Armours name: <input type="text" ng-model=" character.armor.nimi"> </th>
+<th>Soak B <input type="text" ng-model=" character.armor.soakB"> </th>
+<th>Soak L: <input type="text" ng-model=" character.armor.soakL"> </th>
+<th>Hardness B: <input type="text" ng-model=" character.armor.hardnessB"> </th>
 <th>Hardness L: <input type="text" ng-model=" character.armor.hardnessL"> </th>
 <th>Mob penalty: <input type="text" ng-model=" character.armor.mobilityPenalty"> </th>
 <th>Fatigue: <input type="text" ng-model=" character.armor.fatique"> </th>
 </tr>
 </table>
 <button ng-click="reset()">RESET</button>
-<button ng-click="update(character)">SAVE</button>
+<button ng-disabled="characterForm.$invalid" ng-click="update(character)">SAVE</button>
 </form>
+
+  
+  
  <!--<ul>
 <li ng-repeat="hahmo in hahmot"> {{ hahmo }} {{ hahmo.name }} {{ hahmo.characterClass }} </li>
 </ul>
