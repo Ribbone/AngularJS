@@ -15,32 +15,29 @@ public class ExaltedRESTService {
 	@GET
 	@Produces("application/json")
 	@Path("/getchar")
-	public ExaltedCharacterResponse getCharacterJSON(@QueryParam("name") String name) {
-		return new ExaltedCharacterResponse(impl.getCharacter(name));
+	public ExaltedCharacterDto getCharacterJSON(@QueryParam("name") String name) {
+		return new ExaltedCharacterDto(impl.getCharacter(name));
 	}
 
 	@GET
 	@Produces("application/json")
 	@Path("/getcharlist")
 	public ExaltedCharacterListResponse getCharacterListJSON() {
-
-		ExaltedCharacterListResponse response = new ExaltedCharacterListResponse(impl.getCharacterList());
-
-		return response;
+		return new ExaltedCharacterListResponse(impl.getCharacterList());
 	}
 
 	@POST
 	@Consumes("application/json")
 	@Produces("application/json")
 	@Path("/postchar")
-	public ExaltedCharacterResponse getRateJSONPOST(ExaltedCharacterRequest characterPost) {
-		return new ExaltedCharacterResponse(impl.postCharacter(characterPost));
+	public ExaltedCharacterDto getRateJSONPOST(ExaltedCharacterDto character) {
+		return new ExaltedCharacterDto(impl.postCharacter(character));
 	}
 
 	@GET
 	@Produces("application/json")
 	@Path("/postchardummy")
-	public ExaltedCharacterResponse getRateJSONPOSTDummy(@QueryParam("name") String name) {
-		return new ExaltedCharacterResponse(impl.postCharacterDummy(name));
+	public ExaltedCharacterDto getRateJSONPOSTDummy(@QueryParam("name") String name) {
+		return new ExaltedCharacterDto(impl.postCharacterDummy(name));
 	}
 }

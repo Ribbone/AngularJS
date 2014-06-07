@@ -6,11 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 
 @XmlRootElement
-@XmlAccessorType(XmlAccessType.PUBLIC_MEMBER)
 public class ExaltedCharacter {
 
 	public String name = "name";

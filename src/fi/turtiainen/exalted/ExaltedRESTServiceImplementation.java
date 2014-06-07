@@ -28,7 +28,6 @@ public class ExaltedRESTServiceImplementation {
 	}
 
 	private void readConfigurationFile() {
-		System.out.println("Reading configuration file");
 		try {
 			File f = new File(CONFIGURATIONFILELOCATION);
 			BufferedReader br;
@@ -47,7 +46,6 @@ public class ExaltedRESTServiceImplementation {
 			}
 			br.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.exit(-1);
 		}
@@ -55,7 +53,7 @@ public class ExaltedRESTServiceImplementation {
 
 	public ExaltedCharacter getCharacter(String name) {
 		if (characterCache.containsKey(name)) {
-			System.out.println("Read " + name + " from cache.");
+//			System.out.println("Read " + name + " from cache.");
 			return characterCache.get(name);
 		}
 		ExaltedCharacter character = null;
@@ -67,19 +65,22 @@ public class ExaltedRESTServiceImplementation {
 		}
 
 		characterCache.put(name, character);
-		System.out.print(" cache: [");
-		for (String s : characterCache.keySet()) {
-			System.out.print(s + ", ");
-		}
-		System.out.println("]");
+//		System.out.print(" cache: [");
+//		for (String s : characterCache.keySet()) {
+//			System.out.print(s + ", ");
+//		}
+//		System.out.println("]");
 		return character;
 	}
 
-	public ExaltedCharacter postCharacter(ExaltedCharacterRequest characterRequest) {
-		if (characterRequest == null || characterRequest.getExaltedCharacter() == null)
+	public ExaltedCharacter postCharacter(ExaltedCharacterDto characterRequest) {
+		System.out.println(characterRequest);
+		if (characterRequest == null || characterRequest.exaltedCharacter == null) {
+			System.err.println("Null character for post!");
 			return null;
+		}
 
-		ExaltedCharacter character = characterRequest.getExaltedCharacter();
+		ExaltedCharacter character = characterRequest.exaltedCharacter;
 
 		try {
 			writeCharacterToXMLFile(character);
@@ -124,7 +125,7 @@ public class ExaltedRESTServiceImplementation {
 		marshaller.marshal(ex, os);
 		os.close();
 
-		System.out.println("Wrote file " + f.getAbsolutePath());
+//		System.out.println("Wrote file " + f.getAbsolutePath());
 	}
 
 	private ExaltedCharacter readCharacterFromXMLFile(String characterName) throws JAXBException, IOException {
@@ -138,7 +139,7 @@ public class ExaltedRESTServiceImplementation {
 		Object character = unmarshaller.unmarshal(is);
 		is.close();
 
-		System.out.println("Read from the file " + f.getAbsolutePath());
+//		System.out.println("Read from the file " + f.getAbsolutePath());
 		return (ExaltedCharacter) character;
 	}
 

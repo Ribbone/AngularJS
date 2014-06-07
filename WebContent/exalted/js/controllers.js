@@ -1,24 +1,50 @@
 /* Controllers */
+"use strict";
 
-var exaltedAppController = angular.module('exaltedAppController',
-		[ 'exaltedAppServices' ]);
-var charName;
-exaltedAppController.controller('hahmoController', function($scope, myService, mySecondService,myThirdService) {
+var exaltedAppController = angular.module('exaltedAppController', [ 'exaltedAppServices' ]);
+exaltedAppController.controller('hahmoController', function($scope, characterService) {
 
-	myService.getFoos(charName).then(function(foos) {
+	function getCharList() {
+		characterService.getCharList().success(function(response) {
+			$scope.characterList = response.exaltedCharacter;
+		}).error(function(error) {
+			$scope.status = 'Ei pysty lataamaan hahmolistaa';
+		});
+	};
 
-		/*
-		 * if (charName == {}) { $scope.master = {}; } else {
-		 */
-		$scope.character = foos.exaltedCharacter;
-		$scope.master = angular.copy($scope.character);
-		// }
-	});
+	function getChar(name) {
+		characterService.getChar(name).success(function(response) {
+			$scope.character = response.exaltedCharacter;
+		}).error(function(error) {
+			$scope.status = 'Ei pysty lataamaan hahmoa ' + name;
+		});
+	};
 
-	$scope.update = function(character) {
-		$scope.master = angular.copy(character);
-		myThirdService.postFoos(character.name , character);
+	function postChar() {
+		var request = {};
+		request.exaltedCharacter = $scope.character;
+		characterService.postChar(request).success(function(response) {
+			$scope.character = response.exaltedCharacter;
+		}).error(function(error) {
+			$scope.status = 'Ei pysty tallentamaan hahmoa ' + name;
+		});
+	};
 
+	
+	function init() {
+		getCharList();
+		getChar("asd");
+	};
+
+	init();
+
+
+	$scope.save = function() {
+		postChar();
+	};
+	
+	$scope.updateCharacterSelection = function(name) {
+		getChar(name);
 	};
 
 	$scope.reset = function() {
@@ -26,44 +52,34 @@ exaltedAppController.controller('hahmoController', function($scope, myService, m
 	};
 });
 
-exaltedAppController.controller('welcomeController',
-		function($scope, myService) {
+exaltedAppController.controller('welcomeController', function($scope, getChar) {
 
-			/*
-			 * mySecondService.getChars().then(function(foos) {
-			 * 
-			 * $scope.hahmot = foos.hahmotaulukko; //TODO Hahmotaulukkon alustus
-			 * 
-			 * 
-			 * });
-			 */
+	$scope.hahmot = [ {
+		name : 'asd',
+		characterClass : 'lolladin'
+	}, {
+		name : 'Groe',
+		characterClass : 'Warrior'
+	}, {
+		name : 'Risto',
+		characterClass : 'Warrior'
+	}, {
+		name : 'Petteri',
+		characterClass : 'Paladin'
+	}, {
+		name : 'Lari',
+		characterClass : 'Priest'
+	} ];
 
-			$scope.hahmot = [ {
-				name : 'asd',
-				characterClass : 'lolladin'
-			},{
-				name : 'Groe',
-				characterClass : 'Warrior'
-			}, {
-				name : 'Risto',
-				characterClass : 'Warrior'
-			}, {
-				name : 'Petteri',
-				characterClass : 'Paladin'
-			}, {
-				name : 'Lari',
-				characterClass : 'Priest'
-			} ]
+	$scope.newCharacter = function() {
+		console.log('uusi characteri');
+		charName = {};
+	};
 
-			$scope.newCharacter = function() {
-				console.log('uusi characteri');
-				charName = {};
-			}
+	$scope.selectCharacter = function(char) {
+		console.log('valittu character:');
+		console.log(char);
+		charName = angular.copy(char);
+	};
 
-			$scope.selectCharacter = function(char) {
-				console.log('valittu character:');
-				console.log(char);
-				charName = angular.copy(char);
-			}
-
-		});
+});
