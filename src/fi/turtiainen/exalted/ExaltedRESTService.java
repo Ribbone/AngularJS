@@ -15,8 +15,18 @@ public class ExaltedRESTService {
 	@GET
 	@Produces("application/json")
 	@Path("/getchar")
-	public ExaltedCharacterResponse getCharacterJSON(@QueryParam("name") String name){
+	public ExaltedCharacterResponse getCharacterJSON(@QueryParam("name") String name) {
 		return new ExaltedCharacterResponse(impl.getCharacter(name));
+	}
+
+	@GET
+	@Produces("application/json")
+	@Path("/getcharlist")
+	public ExaltedCharacterListResponse getCharacterListJSON() {
+
+		ExaltedCharacterListResponse response = new ExaltedCharacterListResponse(impl.getCharacterList());
+
+		return response;
 	}
 
 	@POST
@@ -26,7 +36,7 @@ public class ExaltedRESTService {
 	public ExaltedCharacterResponse getRateJSONPOST(ExaltedCharacterRequest characterPost) {
 		return new ExaltedCharacterResponse(impl.postCharacter(characterPost));
 	}
-	
+
 	@GET
 	@Produces("application/json")
 	@Path("/postchardummy")

@@ -19,7 +19,7 @@ public class ExaltedCharacter {
 	public String concept = "concept";
 	public String motivation = "motivation";
 	public String anima = "anima";
-	
+
 	public int willpower = 1;
 	public int essence = 1;
 	public int experience = 1;
@@ -35,12 +35,12 @@ public class ExaltedCharacter {
 	public int lostHealthLevels2 = 0;
 	public int lostHealthLevels4 = 0;
 	public int lostHealthLevelsInc = 0;
-	
+
 	public int compassion = 1;
 	public int conviction = 1;
 	public int temperance = 1;
 	public int valor = 1;
-	
+
 	public int strength = 1;
 	public int dexterity = 1;
 	public int stamina = 1;
@@ -50,7 +50,7 @@ public class ExaltedCharacter {
 	public int perception = 1;
 	public int intelligence = 1;
 	public int wits = 1;
-	
+
 	public int archery = 1;
 	public int martialArts = 1;
 	public int melee = 1;
@@ -74,12 +74,12 @@ public class ExaltedCharacter {
 	public int investigation = 1;
 	public int lore = 1;
 	public int occult = 1;
-	
+
 	public Map<String, Integer> specialities = new HashMap<String, Integer>();
 	public List<ExaltedWeapon> weapons = new ArrayList<ExaltedWeapon>();
 	public ExaltedArmor armor = new ExaltedArmor();
-	
-	public ExaltedCharacter(){
+
+	public ExaltedCharacter() {
 		specialities.put("specialityItem", 1);
 		weapons.add(new ExaltedWeapon());
 	}

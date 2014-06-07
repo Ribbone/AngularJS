@@ -6,7 +6,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.xml.bind.JAXBException;
@@ -16,14 +18,12 @@ public class ExaltedRESTServiceImplementation {
 	private Map<String, ExaltedCharacter> characterCache = new HashMap<String, ExaltedCharacter>();
 	private String filepath = "data/";
 
-	private static final String CONFIGURATIONFILELOCATION = System
-			.getProperty("user.home") + "/exalted-configuration/exalted.conf";
+	private static final String CONFIGURATIONFILELOCATION = System.getProperty("user.home") + "/exalted-configuration/exalted.conf";
 	private static final String DATAFILEPATHLABEL = "data.file.path=";
 
 	public ExaltedRESTServiceImplementation() {
 
-		System.out.println("Reading configuration file from "
-				+ new File(CONFIGURATIONFILELOCATION).getAbsolutePath());
+		System.out.println("Reading configuration file from " + new File(CONFIGURATIONFILELOCATION).getAbsolutePath());
 		this.readConfigurationFile();
 	}
 
@@ -39,7 +39,7 @@ public class ExaltedRESTServiceImplementation {
 					filepath = line.split("=")[1];
 					File folder = new File(filepath);
 					System.out.println("Found save folder path: " + folder.getAbsolutePath());
-					if(!folder.exists()){
+					if (!folder.exists()) {
 						System.out.println("Folder did not exist. It does now! " + folder.getAbsolutePath());
 						folder.mkdir();
 					}
@@ -75,10 +75,8 @@ public class ExaltedRESTServiceImplementation {
 		return character;
 	}
 
-	public ExaltedCharacter postCharacter(
-			ExaltedCharacterRequest characterRequest) {
-		if (characterRequest == null
-				|| characterRequest.getExaltedCharacter() == null)
+	public ExaltedCharacter postCharacter(ExaltedCharacterRequest characterRequest) {
+		if (characterRequest == null || characterRequest.getExaltedCharacter() == null)
 			return null;
 
 		ExaltedCharacter character = characterRequest.getExaltedCharacter();
@@ -86,8 +84,7 @@ public class ExaltedRESTServiceImplementation {
 		try {
 			writeCharacterToXMLFile(character);
 		} catch (JAXBException | IOException e) {
-			System.err.println("Failed to write file for name: "
-					+ character.name);
+			System.err.println("Failed to write file for name: " + character.name);
 			return null;
 		}
 
@@ -116,38 +113,43 @@ public class ExaltedRESTServiceImplementation {
 		return getCharacter(character.name);
 	}
 
-	private void writeCharacterToXMLFile(ExaltedCharacter character)
-			throws JAXBException, IOException {
+	private void writeCharacterToXMLFile(ExaltedCharacter character) throws JAXBException, IOException {
 		File f = new File(filepath + character.name + ".xml");
 		ExaltedCharacter ex = character;
 
 		FileOutputStream os = new FileOutputStream(f);
-		javax.xml.bind.JAXBContext jaxbCtx = javax.xml.bind.JAXBContext
-				.newInstance(ex.getClass());
+		javax.xml.bind.JAXBContext jaxbCtx = javax.xml.bind.JAXBContext.newInstance(ex.getClass());
 		javax.xml.bind.Marshaller marshaller = jaxbCtx.createMarshaller();
-		marshaller.setProperty(javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT,
-				Boolean.TRUE);
+		marshaller.setProperty(javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 		marshaller.marshal(ex, os);
 		os.close();
 
 		System.out.println("Wrote file " + f.getAbsolutePath());
 	}
 
-	private ExaltedCharacter readCharacterFromXMLFile(String characterName)
-			throws JAXBException, IOException {
+	private ExaltedCharacter readCharacterFromXMLFile(String characterName) throws JAXBException, IOException {
 		File f = new File(filepath + characterName + ".xml");
 		FileInputStream is = new FileInputStream(f);
 		;
 		ExaltedCharacter ex = new ExaltedCharacter();
 
-		javax.xml.bind.JAXBContext jaxbCtx = javax.xml.bind.JAXBContext
-				.newInstance(ex.getClass());
+		javax.xml.bind.JAXBContext jaxbCtx = javax.xml.bind.JAXBContext.newInstance(ex.getClass());
 		javax.xml.bind.Unmarshaller unmarshaller = jaxbCtx.createUnmarshaller();
 		Object character = unmarshaller.unmarshal(is);
 		is.close();
 
 		System.out.println("Read from the file " + f.getAbsolutePath());
 		return (ExaltedCharacter) character;
+	}
+
+	public List<String> getCharacterList() {
+		ArrayList<String> result = new ArrayList<String>();
+		File dataFolder = new File(filepath);
+		for (final File file : dataFolder.listFiles()) {
+			result.add(file.getName().substring(0, file.getName().indexOf('.')));
+		}
+
+		return result;
 	}
 
 }
