@@ -6,15 +6,19 @@ exaltedAppServices.factory('characterService', function($http) {
 	var characterService = {};
 	
 	characterService.getChar = function(charName) {
-		return $http.get(SERVICEURL + 'getchar?name=' + charName);
+		return $http.get(SERVICEURL + 'character?name=' + charName);
 	};
 
 	characterService.getCharList = function() {
-		return $http.get(SERVICEURL + 'getcharlist');
+		return $http.get(SERVICEURL + 'characterlist');
 	};
 
 	characterService.postChar = function(character) {
-		return $http.post(SERVICEURL + 'postchar', character);
+		return $http.post(SERVICEURL + 'character', character);
+	};
+	
+	characterService.deleteChar = function(character) {
+		return $http.delete(SERVICEURL + 'character?name=' + charName);
 	};
 
 	

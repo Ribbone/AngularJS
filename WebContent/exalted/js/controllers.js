@@ -7,6 +7,7 @@ exaltedAppController.controller('hahmoController', function($scope, characterSer
 	function getCharList() {
 		characterService.getCharList().success(function(response) {
 			$scope.characterList = response.exaltedCharacter;
+			$scope.status = 'Hahmolista ladattu';
 		}).error(function(error) {
 			$scope.status = 'Ei pysty lataamaan hahmolistaa';
 		});
@@ -15,20 +16,31 @@ exaltedAppController.controller('hahmoController', function($scope, characterSer
 	function getChar(name) {
 		characterService.getChar(name).success(function(response) {
 			$scope.character = response.exaltedCharacter;
+			$scope.status = 'Ladattiin hahmo ' + name;
 		}).error(function(error) {
 			$scope.status = 'Ei pysty lataamaan hahmoa ' + name;
 		});
 	};
-
+	
+	function deleteChar(name) {
+		characterService.deleteChar(name).success(function(response) {
+			$scope.status = 'Hahmo tuhottu: ' + name;
+		}).error(function(error) {
+			$scope.status = 'Jokin ongelma hahmon tuhoamisessa...';
+		});
+	};
+	
 	function postChar() {
 		var request = {};
 		request.exaltedCharacter = $scope.character;
 		characterService.postChar(request).success(function(response) {
 			$scope.character = response.exaltedCharacter;
+			$scope.status = 'Hahmo tallennettu: ' + $scope.character.name;
 		}).error(function(error) {
 			$scope.status = 'Ei pysty tallentamaan hahmoa ' + name;
 		});
 	};
+
 
 	
 	function init() {
@@ -43,6 +55,10 @@ exaltedAppController.controller('hahmoController', function($scope, characterSer
 		postChar();
 	};
 	
+	$scope.deleteChar = function() {
+		deleteChar($scope.character.name);
+	};
+	
 	$scope.updateCharacterSelection = function(name) {
 		getChar(name);
 	};
@@ -50,36 +66,4 @@ exaltedAppController.controller('hahmoController', function($scope, characterSer
 	$scope.reset = function() {
 		$scope.character = angular.copy($scope.master);
 	};
-});
-
-exaltedAppController.controller('welcomeController', function($scope, getChar) {
-
-	$scope.hahmot = [ {
-		name : 'asd',
-		characterClass : 'lolladin'
-	}, {
-		name : 'Groe',
-		characterClass : 'Warrior'
-	}, {
-		name : 'Risto',
-		characterClass : 'Warrior'
-	}, {
-		name : 'Petteri',
-		characterClass : 'Paladin'
-	}, {
-		name : 'Lari',
-		characterClass : 'Priest'
-	} ];
-
-	$scope.newCharacter = function() {
-		console.log('uusi characteri');
-		charName = {};
-	};
-
-	$scope.selectCharacter = function(char) {
-		console.log('valittu character:');
-		console.log(char);
-		charName = angular.copy(char);
-	};
-
 });

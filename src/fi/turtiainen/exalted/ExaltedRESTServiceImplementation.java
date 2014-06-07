@@ -53,7 +53,7 @@ public class ExaltedRESTServiceImplementation {
 
 	public ExaltedCharacter getCharacter(String name) {
 		if (characterCache.containsKey(name)) {
-//			System.out.println("Read " + name + " from cache.");
+			// System.out.println("Read " + name + " from cache.");
 			return characterCache.get(name);
 		}
 		ExaltedCharacter character = null;
@@ -65,16 +65,15 @@ public class ExaltedRESTServiceImplementation {
 		}
 
 		characterCache.put(name, character);
-//		System.out.print(" cache: [");
-//		for (String s : characterCache.keySet()) {
-//			System.out.print(s + ", ");
-//		}
-//		System.out.println("]");
+		// System.out.print(" cache: [");
+		// for (String s : characterCache.keySet()) {
+		// System.out.print(s + ", ");
+		// }
+		// System.out.println("]");
 		return character;
 	}
 
 	public ExaltedCharacter postCharacter(ExaltedCharacterDto characterRequest) {
-		System.out.println(characterRequest);
 		if (characterRequest == null || characterRequest.exaltedCharacter == null) {
 			System.err.println("Null character for post!");
 			return null;
@@ -125,13 +124,12 @@ public class ExaltedRESTServiceImplementation {
 		marshaller.marshal(ex, os);
 		os.close();
 
-//		System.out.println("Wrote file " + f.getAbsolutePath());
+		// System.out.println("Wrote file " + f.getAbsolutePath());
 	}
 
 	private ExaltedCharacter readCharacterFromXMLFile(String characterName) throws JAXBException, IOException {
 		File f = new File(filepath + characterName + ".xml");
 		FileInputStream is = new FileInputStream(f);
-		;
 		ExaltedCharacter ex = new ExaltedCharacter();
 
 		javax.xml.bind.JAXBContext jaxbCtx = javax.xml.bind.JAXBContext.newInstance(ex.getClass());
@@ -139,7 +137,7 @@ public class ExaltedRESTServiceImplementation {
 		Object character = unmarshaller.unmarshal(is);
 		is.close();
 
-//		System.out.println("Read from the file " + f.getAbsolutePath());
+		// System.out.println("Read from the file " + f.getAbsolutePath());
 		return (ExaltedCharacter) character;
 	}
 
@@ -151,6 +149,14 @@ public class ExaltedRESTServiceImplementation {
 		}
 
 		return result;
+	}
+
+	public void deleteCharacter(String name) {
+		File f = new File(filepath + name + ".xml");
+		f.delete();
+		if (characterCache.containsKey(name)) {
+			characterCache.remove(name);
+		}
 	}
 
 }
