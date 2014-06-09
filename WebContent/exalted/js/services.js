@@ -1,6 +1,6 @@
 var exaltedAppServices = angular.module('exaltedAppServices', [ 'ngResource' ]);
 // var SERVICEURL="http://185.17.252.40:8080/ExaltedService/rest/";
-var SERVICEURL = "http://localhost:8080/ExaltedService/rest/";
+var SERVICEURL = "http://localhost:8080/ExaltedService/rest/exalted/";
 
 exaltedAppServices.factory('characterService', function($http) {
 	var characterService = {};

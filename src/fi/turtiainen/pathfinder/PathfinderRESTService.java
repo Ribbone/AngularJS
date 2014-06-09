@@ -1,4 +1,4 @@
-package fi.turtiainen.exalted;
+package fi.turtiainen.pathfinder;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -9,18 +9,18 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
-@Path("/exalted")
-public class ExaltedRESTService {
+@Path("/pathfinder")
+public class PathfinderRESTService {
 
-	private static ExaltedRESTServiceImplementation impl = new ExaltedRESTServiceImplementation();
+	private static PathfinderRESTServiceImplementation impl = new PathfinderRESTServiceImplementation();
 
 	@GET
 	@Produces("application/json")
 	@Path("/character")
-	public ExaltedCharacter getCharacterJSON(@QueryParam("name") String name) {
+	public PathfinderCharacter getCharacterJSON(@QueryParam("name") String name) {
 		return impl.getCharacter(name);
 	}
-	
+
 	@DELETE
 	@Path("/character")
 	public Response deleteCharacterJSON(@QueryParam("name") String name) {
@@ -31,15 +31,15 @@ public class ExaltedRESTService {
 	@GET
 	@Produces("application/json")
 	@Path("/characterlist")
-	public ExaltedCharacterListResponse getCharacterListJSON() {
-		return new ExaltedCharacterListResponse(impl.getCharacterList());
+	public PathfinderCharacterListResponse getCharacterListJSON() {
+		return new PathfinderCharacterListResponse(impl.getCharacterList());
 	}
 
 	@POST
 	@Consumes("application/json")
 	@Produces("application/json")
 	@Path("/character")
-	public ExaltedCharacter getRateJSONPOST(ExaltedCharacter character) {
+	public PathfinderCharacter getRateJSONPOST(PathfinderCharacter character) {
 		return impl.postCharacter(character);
 	}
 }
