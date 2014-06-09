@@ -1,499 +1,618 @@
-{ "abilities" : { "charisma" : "askdjh",
-      "constitution" : "askdjh",
-      "dexterity" : "askdjh",
-      "intelligence" : "askdjh",
-      "strength" : "askdjh",
-      "wisdom" : "askdjh"
-    },
-  "armor" : { "bonus" : "askdjh",
-      "checkPenalty" : "askdjh",
-      "name" : "askdjh",
-      "notes" : "askdjh",
-      "properties" : "askdjh",
-      "spellFailure" : "askdjh",
-      "type" : "askdjh",
-      "weight" : "askdjh"
-    },
-  "combat" : { "baseAttackBonus" : "askdjh",
-      "cmbModifier" : "askdjh",
-      "damage" : "askdjh",
-      "damageNotes" : "askdjh",
-      "damageReduction" : "askdjh",
-      "fortitudeBaseSave" : "askdjh",
-      "fortitudeModifier" : "askdjh",
-      "healthPoints" : "askdjh",
-      "reflexBaseSave" : "askdjh",
-      "reflexModifier" : "askdjh",
-      "saveNotes" : "askdjh",
-      "spellResistance" : "askdjh",
-      "willBaseSave" : "askdjh",
-      "willModifier" : "askdjh"
-    },
-  "items" : { "name" : "askdjh",
-      "notes" : "askdjh",
-      "weight" : "askdjh"
-    },
-  "nature" : { "age" : "askdjh",
-      "alignment" : "askdjh",
-      "deity" : "askdjh",
-      "eyes" : "askdjh",
-      "gender" : "askdjh",
-      "hair" : "askdjh",
-      "height" : "askdjh",
-      "homeland" : "askdjh",
-      "languages" : "askdjh",
-      "name" : "askdjh",
-      "player" : "askdjh",
-      "race" : "askdjh",
-      "size" : "askdjh",
-      "weight" : "askdjh"
-    },
-  "resources" : { "experience" : "askdjh",
-      "experienceNotes" : "askdjh",
-      "experienceTarget" : "askdjh",
-      "experienceUsed" : "askdjh",
-      "moneycp" : "askdjh",
-      "moneygp" : "askdjh",
-      "moneypp" : "askdjh",
-      "moneysp" : "askdjh"
-    },
-  "skillIsClassSkill" : { "acrobatics" : "askdjh",
-      "appraise" : "askdjh",
-      "bluff" : "askdjh",
-      "climb" : "askdjh",
-      "craft" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "diplomacy" : "askdjh",
-      "disableDevice" : "askdjh",
-      "disguise" : "askdjh",
-      "escapeArtist" : "askdjh",
-      "fly" : "askdjh",
-      "handleAnimal" : "askdjh",
-      "heal" : "askdjh",
-      "intimidate" : "askdjh",
-      "knowledge" : { "entry" : [ { "key" : "religion",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "history",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "nobility",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "geography",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "local",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "planes",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "engineering",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "dungeoneering",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "arcana",
-                "value" : "ThisBeNull"
-              }
-            ] },
-      "linguistics" : "askdjh",
-      "perception" : "askdjh",
-      "perform" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "profession" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "ride" : "askdjh",
-      "senseMotive" : "askdjh",
-      "skillConditionalModifiers" : "askdjh",
-      "sleightOfHand" : "askdjh",
-      "spellcraft" : "askdjh",
-      "stealth" : "askdjh",
-      "survival" : "askdjh",
-      "swim" : "askdjh",
-      "useMagicDevice" : "askdjh"
-    },
-  "skillModifiers" : { "acrobatics" : "askdjh",
-      "appraise" : "askdjh",
-      "bluff" : "askdjh",
-      "climb" : "askdjh",
-      "craft" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "diplomacy" : "askdjh",
-      "disableDevice" : "askdjh",
-      "disguise" : "askdjh",
-      "escapeArtist" : "askdjh",
-      "fly" : "askdjh",
-      "handleAnimal" : "askdjh",
-      "heal" : "askdjh",
-      "intimidate" : "askdjh",
-      "knowledge" : { "entry" : [ { "key" : "religion",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "history",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "nobility",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "geography",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "local",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "planes",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "engineering",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "dungeoneering",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "arcana",
-                "value" : "ThisBeNull"
-              }
-            ] },
-      "linguistics" : "askdjh",
-      "perception" : "askdjh",
-      "perform" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "profession" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "ride" : "askdjh",
-      "senseMotive" : "askdjh",
-      "skillConditionalModifiers" : "askdjh",
-      "sleightOfHand" : "askdjh",
-      "spellcraft" : "askdjh",
-      "stealth" : "askdjh",
-      "survival" : "askdjh",
-      "swim" : "askdjh",
-      "useMagicDevice" : "askdjh"
-    },
-  "skillRanks" : { "acrobatics" : "askdjh",
-      "appraise" : "askdjh",
-      "bluff" : "askdjh",
-      "climb" : "askdjh",
-      "craft" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "diplomacy" : "askdjh",
-      "disableDevice" : "askdjh",
-      "disguise" : "askdjh",
-      "escapeArtist" : "askdjh",
-      "fly" : "askdjh",
-      "handleAnimal" : "askdjh",
-      "heal" : "askdjh",
-      "intimidate" : "askdjh",
-      "knowledge" : { "entry" : [ { "key" : "religion",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "history",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "nobility",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "geography",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "local",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "planes",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "engineering",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "dungeoneering",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "arcana",
-                "value" : "ThisBeNull"
-              }
-            ] },
-      "linguistics" : "askdjh",
-      "perception" : "askdjh",
-      "perform" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "profession" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "ride" : "askdjh",
-      "senseMotive" : "askdjh",
-      "skillConditionalModifiers" : "askdjh",
-      "sleightOfHand" : "askdjh",
-      "spellcraft" : "askdjh",
-      "stealth" : "askdjh",
-      "survival" : "askdjh",
-      "swim" : "askdjh",
-      "useMagicDevice" : "askdjh"
-    },
-  "skillTempModifiers" : { "acrobatics" : "askdjh",
-      "appraise" : "askdjh",
-      "bluff" : "askdjh",
-      "climb" : "askdjh",
-      "craft" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "diplomacy" : "askdjh",
-      "disableDevice" : "askdjh",
-      "disguise" : "askdjh",
-      "escapeArtist" : "askdjh",
-      "fly" : "askdjh",
-      "handleAnimal" : "askdjh",
-      "heal" : "askdjh",
-      "intimidate" : "askdjh",
-      "knowledge" : { "entry" : [ { "key" : "religion",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "history",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "nobility",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "geography",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "local",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "planes",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "engineering",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "dungeoneering",
-                "value" : "ThisBeNull"
-              },
-              { "key" : "arcana",
-                "value" : "ThisBeNull"
-              }
-            ] },
-      "linguistics" : "askdjh",
-      "perception" : "askdjh",
-      "perform" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "profession" : { "entry" : { "key" : "ThisBeNull",
-              "value" : "ThisBeNull"
-            } },
-      "ride" : "askdjh",
-      "senseMotive" : "askdjh",
-      "skillConditionalModifiers" : "askdjh",
-      "sleightOfHand" : "askdjh",
-      "spellcraft" : "askdjh",
-      "stealth" : "askdjh",
-      "survival" : "askdjh",
-      "swim" : "askdjh",
-      "useMagicDevice" : "askdjh"
-    },
-  "speed" : { "armoredSpeed" : "askdjh",
-      "baseSpeed" : "askdjh",
-      "burrowSpeed" : "askdjh",
-      "climbSpeed" : "askdjh",
-      "flySpeed" : "askdjh",
-      "speedNotes" : "askdjh",
-      "swimSpeed" : "askdjh"
-    },
-  "spellList" : [ { "bonusSpells" : "askdjh",
-        "spellLvl" : "0",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
+{
+   "nature":{
+      "name":"askdjh",
+      "alignment":"askdjh",
+      "player":"askdjh",
+      "deity":"askdjh",
+      "homeland":"askdjh",
+      "race":"askdjh",
+      "size":"askdjh",
+      "gender":"askdjh",
+      "age":"askdjh",
+      "height":"askdjh",
+      "weight":"askdjh",
+      "hair":"askdjh",
+      "eyes":"askdjh",
+      "languages":"askdjh"
+   },
+   "abilities":{
+      "strength":"askdjh",
+      "dexterity":"askdjh",
+      "constitution":"askdjh",
+      "intelligence":"askdjh",
+      "wisdom":"askdjh",
+      "charisma":"askdjh"
+   },
+   "tempAbilities":{
+      "strength":"askdjh",
+      "dexterity":"askdjh",
+      "constitution":"askdjh",
+      "intelligence":"askdjh",
+      "wisdom":"askdjh",
+      "charisma":"askdjh"
+   },
+   "speed":{
+      "baseSpeed":"askdjh",
+      "armoredSpeed":"askdjh",
+      "flySpeed":"askdjh",
+      "swimSpeed":"askdjh",
+      "climbSpeed":"askdjh",
+      "burrowSpeed":"askdjh",
+      "speedNotes":"askdjh"
+   },
+   "combat":{
+      "healthPoints":"askdjh",
+      "damageReduction":"askdjh",
+      "damage":"askdjh",
+      "damageNotes":"askdjh",
+      "fortitudeBaseSave":"askdjh",
+      "reflexBaseSave":"askdjh",
+      "willBaseSave":"askdjh",
+      "fortitudeModifier":"askdjh",
+      "reflexModifier":"askdjh",
+      "willModifier":"askdjh",
+      "saveNotes":"askdjh",
+      "baseAttackBonus":"askdjh",
+      "spellResistance":"askdjh",
+      "cmbModifier":"askdjh"
+   },
+   "skillRanks":{
+      "acrobatics":"askdjh",
+      "climb":"askdjh",
+      "appraise":"askdjh",
+      "bluff":"askdjh",
+      "diplomacy":"askdjh",
+      "disableDevice":"askdjh",
+      "disguise":"askdjh",
+      "escapeArtist":"askdjh",
+      "fly":"askdjh",
+      "handleAnimal":"askdjh",
+      "heal":"askdjh",
+      "intimidate":"askdjh",
+      "linguistics":"askdjh",
+      "perception":"askdjh",
+      "ride":"askdjh",
+      "senseMotive":"askdjh",
+      "sleightOfHand":"askdjh",
+      "spellcraft":"askdjh",
+      "stealth":"askdjh",
+      "survival":"askdjh",
+      "swim":"askdjh",
+      "useMagicDevice":"askdjh",
+      "skillConditionalModifiers":"askdjh",
+      "knowledge":{
+         "entry":[
+            {
+               "key":"religion",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"history",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"nobility",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"geography",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"local",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"planes",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"engineering",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"dungeoneering",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"arcana",
+               "value":"ThisBeNull"
+            }
+         ]
       },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "1st",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
+      "craft":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
       },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "2nd",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
+      "perform":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
       },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "3rd",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
-      },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "4th",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
-      },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "5th",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
-      },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "6th",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
-      },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "7th",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
-      },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "8th",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
-      },
-      { "bonusSpells" : "askdjh",
-        "spellLvl" : "9th",
-        "spellSaveDC" : "askdjh",
-        "spells" : { "SpellResistance" : "askdjh",
-            "castingTime" : "askdjh",
-            "components" : "askdjh",
-            "duration" : "askdjh",
-            "name" : "askdjh",
-            "notes" : "askdjh",
-            "range" : "askdjh",
-            "savingThrow" : "askdjh",
-            "school" : "askdjh",
-            "target" : "askdjh"
-          },
-        "spellsKnown" : "askdjh",
-        "spellsPerDay" : "askdjh"
+      "profession":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
       }
-    ],
-  "tempAbilities" : { "charisma" : "askdjh",
-      "constitution" : "askdjh",
-      "dexterity" : "askdjh",
-      "intelligence" : "askdjh",
-      "strength" : "askdjh",
-      "wisdom" : "askdjh"
-    },
-  "weapons" : { "ammunition" : "askdjh",
-      "attackBonus" : "askdjh",
-      "critical" : "askdjh",
-      "damage" : "askdjh",
-      "name" : "askdjh",
-      "notes" : "askdjh",
-      "range" : "askdjh",
-      "type" : "askdjh"
-    }
+   },
+   "skillModifiers":{
+      "acrobatics":"askdjh",
+      "climb":"askdjh",
+      "appraise":"askdjh",
+      "bluff":"askdjh",
+      "diplomacy":"askdjh",
+      "disableDevice":"askdjh",
+      "disguise":"askdjh",
+      "escapeArtist":"askdjh",
+      "fly":"askdjh",
+      "handleAnimal":"askdjh",
+      "heal":"askdjh",
+      "intimidate":"askdjh",
+      "linguistics":"askdjh",
+      "perception":"askdjh",
+      "ride":"askdjh",
+      "senseMotive":"askdjh",
+      "sleightOfHand":"askdjh",
+      "spellcraft":"askdjh",
+      "stealth":"askdjh",
+      "survival":"askdjh",
+      "swim":"askdjh",
+      "useMagicDevice":"askdjh",
+      "skillConditionalModifiers":"askdjh",
+      "knowledge":{
+         "entry":[
+            {
+               "key":"religion",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"history",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"nobility",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"geography",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"local",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"planes",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"engineering",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"dungeoneering",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"arcana",
+               "value":"ThisBeNull"
+            }
+         ]
+      },
+      "craft":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      },
+      "perform":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      },
+      "profession":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      }
+   },
+   "skillTempModifiers":{
+      "acrobatics":"askdjh",
+      "climb":"askdjh",
+      "appraise":"askdjh",
+      "bluff":"askdjh",
+      "diplomacy":"askdjh",
+      "disableDevice":"askdjh",
+      "disguise":"askdjh",
+      "escapeArtist":"askdjh",
+      "fly":"askdjh",
+      "handleAnimal":"askdjh",
+      "heal":"askdjh",
+      "intimidate":"askdjh",
+      "linguistics":"askdjh",
+      "perception":"askdjh",
+      "ride":"askdjh",
+      "senseMotive":"askdjh",
+      "sleightOfHand":"askdjh",
+      "spellcraft":"askdjh",
+      "stealth":"askdjh",
+      "survival":"askdjh",
+      "swim":"askdjh",
+      "useMagicDevice":"askdjh",
+      "skillConditionalModifiers":"askdjh",
+      "knowledge":{
+         "entry":[
+            {
+               "key":"religion",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"history",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"nobility",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"geography",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"local",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"planes",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"engineering",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"dungeoneering",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"arcana",
+               "value":"ThisBeNull"
+            }
+         ]
+      },
+      "craft":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      },
+      "perform":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      },
+      "profession":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      }
+   },
+   "skillIsClassSkill":{
+      "acrobatics":"askdjh",
+      "climb":"askdjh",
+      "appraise":"askdjh",
+      "bluff":"askdjh",
+      "diplomacy":"askdjh",
+      "disableDevice":"askdjh",
+      "disguise":"askdjh",
+      "escapeArtist":"askdjh",
+      "fly":"askdjh",
+      "handleAnimal":"askdjh",
+      "heal":"askdjh",
+      "intimidate":"askdjh",
+      "linguistics":"askdjh",
+      "perception":"askdjh",
+      "ride":"askdjh",
+      "senseMotive":"askdjh",
+      "sleightOfHand":"askdjh",
+      "spellcraft":"askdjh",
+      "stealth":"askdjh",
+      "survival":"askdjh",
+      "swim":"askdjh",
+      "useMagicDevice":"askdjh",
+      "skillConditionalModifiers":"askdjh",
+      "knowledge":{
+         "entry":[
+            {
+               "key":"religion",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"history",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"nobility",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"geography",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"local",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"planes",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"engineering",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"dungeoneering",
+               "value":"ThisBeNull"
+            },
+            {
+               "key":"arcana",
+               "value":"ThisBeNull"
+            }
+         ]
+      },
+      "craft":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      },
+      "perform":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      },
+      "profession":{
+         "entry":{
+            "key":"ThisBeNull",
+            "value":"ThisBeNull"
+         }
+      }
+   },
+   "weapons":{
+      "name":"askdjh",
+      "attackBonus":"askdjh",
+      "critical":"askdjh",
+      "type":"askdjh",
+      "range":"askdjh",
+      "ammunition":"askdjh",
+      "damage":"askdjh",
+      "notes":"askdjh"
+   },
+   "armor":{
+      "name":"askdjh",
+      "bonus":"askdjh",
+      "type":"askdjh",
+      "checkPenalty":"askdjh",
+      "spellFailure":"askdjh",
+      "weight":"askdjh",
+      "properties":"askdjh",
+      "notes":"askdjh"
+   },
+   "items":{
+      "name":"askdjh",
+      "weight":"askdjh",
+      "notes":"askdjh"
+   },
+   "spellList":[
+      {
+         "spellLvl":"0",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"1st",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"2nd",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"3rd",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"4th",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"5th",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"6th",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"7th",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"8th",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      },
+      {
+         "spellLvl":"9th",
+         "spellsKnown":"askdjh",
+         "spellSaveDC":"askdjh",
+         "spellsPerDay":"askdjh",
+         "bonusSpells":"askdjh",
+         "spells":{
+            "name":"askdjh",
+            "school":"askdjh",
+            "castingTime":"askdjh",
+            "components":"askdjh",
+            "range":"askdjh",
+            "target":"askdjh",
+            "duration":"askdjh",
+            "savingThrow":"askdjh",
+            "SpellResistance":"askdjh",
+            "notes":"askdjh"
+         }
+      }
+   ],
+   "resources":{
+      "moneycp":"askdjh",
+      "moneysp":"askdjh",
+      "moneygp":"askdjh",
+      "moneypp":"askdjh",
+      "experience":"askdjh",
+      "experienceUsed":"askdjh",
+      "experienceNotes":"askdjh",
+      "experienceTarget":"askdjh"
+   }
 }

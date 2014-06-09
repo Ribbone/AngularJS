@@ -35,26 +35,39 @@ public class PathfinderCharacter {
 		// For dummy purposes
 		// Kaikki tullaan alustamaan nulleiksi lopullisessa versiossa
 
-		this.skillRanks.craft.put("ThisBeNull", "ThisBeNull");
-		this.skillRanks.perform.put("ThisBeNull", "ThisBeNull");
-		this.skillRanks.profession.put("ThisBeNull", "ThisBeNull");
+		this.skillRanks.craft.put("c1", "a");
+		this.skillRanks.perform.put("p2", "a");
+		this.skillRanks.profession.put("p3", "a");
 
-		this.skillModifiers.craft.put("ThisBeNull", "ThisBeNull");
-		this.skillModifiers.perform.put("ThisBeNull", "ThisBeNull");
-		this.skillModifiers.profession.put("ThisBeNull", "ThisBeNull");
+		this.skillModifiers.craft.put("c1", "a");
+		this.skillModifiers.perform.put("p2", "a");
+		this.skillModifiers.profession.put("p3", "a");
 
-		this.skillTempModifiers.craft.put("ThisBeNull", "ThisBeNull");
-		this.skillTempModifiers.perform.put("ThisBeNull", "ThisBeNull");
-		this.skillTempModifiers.profession.put("ThisBeNull", "ThisBeNull");
+		this.skillTempModifiers.craft.put("c1", "a");
+		this.skillTempModifiers.perform.put("p2", "a");
+		this.skillTempModifiers.profession.put("p3", "a");
 
-		this.skillIsClassSkill.craft.put("ThisBeNull", "ThisBeNull");
-		this.skillIsClassSkill.perform.put("ThisBeNull", "ThisBeNull");
-		this.skillIsClassSkill.profession.put("ThisBeNull", "ThisBeNull");
+		this.skillIsClassSkill.craft.put("c1", "a");
+		this.skillIsClassSkill.perform.put("p2", "a");
+		this.skillIsClassSkill.profession.put("p3", "a");
 
 		this.armor.add(new Armor());
+		this.armor.add(new Armor());
+		this.weapons.add(new Weapon());
 		this.weapons.add(new Weapon());
 		this.items.add(new Item());
+		this.items.add(new Item());
 
+		this.spellList.get(0).spells.add(new Spell());
+		this.spellList.get(1).spells.add(new Spell());
+		this.spellList.get(2).spells.add(new Spell());
+		this.spellList.get(3).spells.add(new Spell());
+		this.spellList.get(4).spells.add(new Spell());
+		this.spellList.get(5).spells.add(new Spell());
+		this.spellList.get(6).spells.add(new Spell());
+		this.spellList.get(7).spells.add(new Spell());
+		this.spellList.get(8).spells.add(new Spell());
+		this.spellList.get(9).spells.add(new Spell());
 		this.spellList.get(0).spells.add(new Spell());
 		this.spellList.get(1).spells.add(new Spell());
 		this.spellList.get(2).spells.add(new Spell());
@@ -70,85 +83,85 @@ public class PathfinderCharacter {
 	// Classes
 
 	public static class Nature {
-		public String name = "askdjh";
-		public String alignment = "askdjh";
-		public String player = "askdjh";
-		public String deity = "askdjh";
-		public String homeland = "askdjh";
-		public String race = "askdjh";
-		public String size = "askdjh";
-		public String gender = "askdjh";
-		public String age = "askdjh";
-		public String height = "askdjh";
-		public String weight = "askdjh";
-		public String hair = "askdjh";
-		public String eyes = "askdjh";
-		public String languages = "askdjh";
+		public String name = "a";
+		public String alignment = "a";
+		public String player = "a";
+		public String deity = "a";
+		public String homeland = "a";
+		public String race = "a";
+		public String size = "a";
+		public String gender = "a";
+		public String age = "a";
+		public String height = "a";
+		public String weight = "a";
+		public String hair = "a";
+		public String eyes = "a";
+		public String languages = "a";
 	}
 
 	public static class Speed {
-		public String baseSpeed = "askdjh";
-		public String armoredSpeed = "askdjh";
-		public String flySpeed = "askdjh";
-		public String swimSpeed = "askdjh";
-		public String climbSpeed = "askdjh";
-		public String burrowSpeed = "askdjh";
-		public String speedNotes = "askdjh";
+		public String baseSpeed = "a";
+		public String armoredSpeed = "a";
+		public String flySpeed = "a";
+		public String swimSpeed = "a";
+		public String climbSpeed = "a";
+		public String burrowSpeed = "a";
+		public String speedNotes = "a";
 	}
 
 	public static class Combat {
-		public String healthPoints = "askdjh";
-		public String damageReduction = "askdjh";
-		public String damage = "askdjh";
-		public String damageNotes = "askdjh";
+		public String healthPoints = "a";
+		public String damageReduction = "a";
+		public String damage = "a";
+		public String damageNotes = "a";
 
-		public String fortitudeBaseSave = "askdjh";
-		public String reflexBaseSave = "askdjh";
-		public String willBaseSave = "askdjh";
-		public String fortitudeModifier = "askdjh";
-		public String reflexModifier = "askdjh";
-		public String willModifier = "askdjh";
-		public String saveNotes = "askdjh";
+		public String fortitudeBaseSave = "a";
+		public String reflexBaseSave = "a";
+		public String willBaseSave = "a";
+		public String fortitudeModifier = "a";
+		public String reflexModifier = "a";
+		public String willModifier = "a";
+		public String saveNotes = "a";
 
-		public String baseAttackBonus = "askdjh";
-		public String spellResistance = "askdjh";
-		public String cmbModifier = "askdjh";
+		public String baseAttackBonus = "a";
+		public String spellResistance = "a";
+		public String cmbModifier = "a";
 	}
 
 	public static class Abilities {
-		public String strength = "askdjh";
-		public String dexterity = "askdjh";
-		public String constitution = "askdjh";
-		public String intelligence = "askdjh";
-		public String wisdom = "askdjh";
-		public String charisma = "askdjh";
+		public String strength = "a";
+		public String dexterity = "a";
+		public String constitution = "a";
+		public String intelligence = "a";
+		public String wisdom = "a";
+		public String charisma = "a";
 	}
 
 	public static class Skills {
-		public String acrobatics = "askdjh";
-		public String climb = "askdjh";
-		public String appraise = "askdjh";
-		public String bluff = "askdjh";
-		public String diplomacy = "askdjh";
-		public String disableDevice = "askdjh";
-		public String disguise = "askdjh";
-		public String escapeArtist = "askdjh";
-		public String fly = "askdjh";
-		public String handleAnimal = "askdjh";
-		public String heal = "askdjh";
-		public String intimidate = "askdjh";
-		public String linguistics = "askdjh";
-		public String perception = "askdjh";
-		public String ride = "askdjh";
-		public String senseMotive = "askdjh";
-		public String sleightOfHand = "askdjh";
-		public String spellcraft = "askdjh";
-		public String stealth = "askdjh";
-		public String survival = "askdjh";
-		public String swim = "askdjh";
-		public String useMagicDevice = "askdjh";
+		public String acrobatics = "a";
+		public String climb = "a";
+		public String appraise = "a";
+		public String bluff = "a";
+		public String diplomacy = "a";
+		public String disableDevice = "a";
+		public String disguise = "a";
+		public String escapeArtist = "a";
+		public String fly = "a";
+		public String handleAnimal = "a";
+		public String heal = "a";
+		public String intimidate = "a";
+		public String linguistics = "a";
+		public String perception = "a";
+		public String ride = "a";
+		public String senseMotive = "a";
+		public String sleightOfHand = "a";
+		public String spellcraft = "a";
+		public String stealth = "a";
+		public String survival = "a";
+		public String swim = "a";
+		public String useMagicDevice = "a";
 
-		public String skillConditionalModifiers = "askdjh";
+		public String skillConditionalModifiers = "a";
 
 		public HashMap<String, String> knowledge = new HashMap<String, String>();
 		public HashMap<String, String> craft = new HashMap<String, String>();
@@ -156,55 +169,55 @@ public class PathfinderCharacter {
 		public HashMap<String, String> profession = new HashMap<String, String>();
 
 		public Skills() {
-			this.knowledge.put("arcana", "ThisBeNull");
-			this.knowledge.put("dungeoneering", "ThisBeNull");
-			this.knowledge.put("engineering", "ThisBeNull");
-			this.knowledge.put("geography", "ThisBeNull");
-			this.knowledge.put("history", "ThisBeNull");
-			this.knowledge.put("local", "ThisBeNull");
-			this.knowledge.put("nobility", "ThisBeNull");
-			this.knowledge.put("planes", "ThisBeNull");
-			this.knowledge.put("religion", "ThisBeNull");
+			this.knowledge.put("arcana", "a");
+			this.knowledge.put("dungeoneering", "a");
+			this.knowledge.put("engineering", "a");
+			this.knowledge.put("geography", "a");
+			this.knowledge.put("history", "a");
+			this.knowledge.put("local", "a");
+			this.knowledge.put("nobility", "a");
+			this.knowledge.put("planes", "a");
+			this.knowledge.put("religion", "a");
 
 		}
 	}
 
 	public static class Weapon {
-		public String name = "askdjh";
-		public String attackBonus = "askdjh";
-		public String critical = "askdjh";
-		public String type = "askdjh";
-		public String range = "askdjh";
-		public String ammunition = "askdjh";
-		public String damage = "askdjh";
-		public String notes = "askdjh";
+		public String name = "a";
+		public String attackBonus = "a";
+		public String critical = "a";
+		public String type = "a";
+		public String range = "a";
+		public String ammunition = "a";
+		public String damage = "a";
+		public String notes = "a";
 	}
 
 	public static class Armor {
-		public String name = "askdjh";
-		public String bonus = "askdjh";
-		public String type = "askdjh";
-		public String checkPenalty = "askdjh";
-		public String spellFailure = "askdjh";
-		public String weight = "askdjh";
-		public String properties = "askdjh";
-		public String notes = "askdjh";
+		public String name = "a";
+		public String bonus = "a";
+		public String type = "a";
+		public String checkPenalty = "a";
+		public String spellFailure = "a";
+		public String weight = "a";
+		public String properties = "a";
+		public String notes = "a";
 	}
 
 	public static class Item {
-		public String name = "askdjh";
-		public String weight = "askdjh";
-		public String notes = "askdjh";
+		public String name = "a";
+		public String weight = "a";
+		public String notes = "a";
 	}
 
 	public static class Feat {
-		public String name = "askdjh";
-		public String notes = "askdjh";
+		public String name = "a";
+		public String notes = "a";
 	}
 
 	public static class SpecialAbility {
-		public String name = "askdjh";
-		public String notes = "askdjh";
+		public String name = "a";
+		public String notes = "a";
 	}
 
 	@SuppressWarnings("serial")
@@ -231,37 +244,37 @@ public class PathfinderCharacter {
 		public SpellListEntry() {
 		}
 
-		public String spellLvl = "askdjh";
-		public String spellsKnown = "askdjh";
-		public String spellSaveDC = "askdjh";
-		public String spellsPerDay = "askdjh";
-		public String bonusSpells = "askdjh";
+		public String spellLvl = "a";
+		public String spellsKnown = "a";
+		public String spellSaveDC = "a";
+		public String spellsPerDay = "a";
+		public String bonusSpells = "a";
 		public ArrayList<Spell> spells = new ArrayList<Spell>();
 	}
 
 	public static class Spell {
-		public String name = "askdjh";
-		public String school = "askdjh";
-		public String castingTime = "askdjh";
-		public String components = "askdjh";
-		public String range = "askdjh";
-		public String target = "askdjh";
-		public String duration = "askdjh";
-		public String savingThrow = "askdjh";
-		public String SpellResistance = "askdjh";
-		public String notes = "askdjh";
+		public String name = "a";
+		public String school = "a";
+		public String castingTime = "a";
+		public String components = "a";
+		public String range = "a";
+		public String target = "a";
+		public String duration = "a";
+		public String savingThrow = "a";
+		public String SpellResistance = "a";
+		public String notes = "a";
 	}
 
 	public static class Resources {
-		public String moneycp = "askdjh";
-		public String moneysp = "askdjh";
-		public String moneygp = "askdjh";
-		public String moneypp = "askdjh";
+		public String moneycp = "a";
+		public String moneysp = "a";
+		public String moneygp = "a";
+		public String moneypp = "a";
 
-		public String experience = "askdjh";
-		public String experienceUsed = "askdjh";
-		public String experienceNotes = "askdjh";
-		public String experienceTarget = "askdjh";
+		public String experience = "a";
+		public String experienceUsed = "a";
+		public String experienceNotes = "a";
+		public String experienceTarget = "a";
 	}
 
 }

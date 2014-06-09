@@ -1,0 +1,43 @@
+<div>
+	{{status}} <br /> {{character.nature.name}}
+
+	<div data-ng-repeat="field in fields.nature">
+		{{field}}: <input data-ng-model="character.nature[field]" name="field">
+	</div>
+
+	<div data-ng-repeat="field in fields.abilities">
+		{{field}}: <input data-ng-model="character.abilities[field]" name="field">
+	</div>
+	<div data-ng-repeat="field in fields.speed">
+		{{field}}: <input data-ng-model="character.speed[field]" name="field">
+	</div>
+	<div data-ng-repeat="field in fields.combat">
+		{{field}}: <input data-ng-model="character.combat[field]" name="field">
+	</div>
+	<div data-ng-repeat="field in fields.skills">
+		{{field}}: <input data-ng-model="character.skillRanks[field]" name="field">
+	</div>
+	<div data-ng-repeat="weapon in character.weapons">
+		<div data-ng-repeat="field in fields.weapons">
+			{{field}}: <input data-ng-model="weapon[field]" name="field">
+		</div>
+	</div>
+	<div data-ng-repeat="armor in character.armor">
+		<div data-ng-repeat="field in fields.armor">
+			{{field}}: <input data-ng-model="armor[field]" name="field">
+		</div>
+	</div>
+	<div data-ng-repeat="field in fields.items">
+		{{field}}: <input data-ng-model="character.items[field]" name="field">
+	</div>
+	<div data-ng-repeat="field in fields.spellList">
+		{{field}}: <input data-ng-model="character.spellList[field]" name="field">
+	</div>
+	<div data-ng-repeat="field in fields.spell">
+		{{field}}: <input data-ng-model="character.spell[field]" name="field">
+	</div>
+	<div data-ng-repeat="field in fields.resources">
+		{{field}}: <input data-ng-model="character.resources[field]" name="field">
+	</div>
+
+</div>

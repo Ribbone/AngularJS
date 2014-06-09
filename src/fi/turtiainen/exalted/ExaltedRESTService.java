@@ -20,7 +20,7 @@ public class ExaltedRESTService {
 	public ExaltedCharacter getCharacterJSON(@QueryParam("name") String name) {
 		return impl.getCharacter(name);
 	}
-	
+
 	@DELETE
 	@Path("/character")
 	public Response deleteCharacterJSON(@QueryParam("name") String name) {

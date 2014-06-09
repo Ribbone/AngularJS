@@ -85,7 +85,6 @@ public class PathfinderRESTServiceImplementation {
 		return getCharacter(character.nature.name);
 	}
 
-
 	public List<String> getCharacterList() {
 		return xmlwriter.getFileList(PATHFINDER);
 	}
