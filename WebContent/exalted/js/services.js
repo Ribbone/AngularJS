@@ -4,7 +4,7 @@ var SERVICEURL = "http://localhost:8080/ExaltedService/rest/exalted/";
 
 exaltedAppServices.factory('characterService', function($http) {
 	var characterService = {};
-	
+
 	characterService.getChar = function(charName) {
 		return $http.get(SERVICEURL + 'character?name=' + charName);
 	};
@@ -16,11 +16,10 @@ exaltedAppServices.factory('characterService', function($http) {
 	characterService.postChar = function(character) {
 		return $http.post(SERVICEURL + 'character', character);
 	};
-	
+
 	characterService.deleteChar = function(character) {
-		return $http.delete(SERVICEURL + 'character?name=' + charName);
+		return $http['delete'](SERVICEURL + 'character?name=' + charName); // koska delete on varattu sana JavaScriptissä
 	};
 
-	
 	return characterService;
 });
