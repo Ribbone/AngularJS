@@ -1,6 +1,5 @@
 <div>
-
-MAINPAGE
+	<!-- 
 	{{status}} <br /> {{character.nature.name.value}}
 
 	<div>
@@ -60,29 +59,53 @@ MAINPAGE
 			</div>
 		</div>
 	</div>
+	
+	 -->
 	<div>
 		<h1>Spell List</h1>
-		<div data-ng-repeat="spellEntry in character.spellList">
+		<div>
 			<h2>SpellList</h2>
-			<div data-ng-repeat="field in spellEntry">
-				{{field.label}}: <input data-ng-model="field.value">
-			</div>
+
+			<table>
+				<tr>
+					<th>{{character.spellList[0].spellLvl.label}}</th>
+					<th>{{character.spellList[0].spellsKnown.label}}</th>
+					<th>{{character.spellList[0].spellSaveDC.label}}</th>
+					<th>{{character.spellList[0].spellsPerDay.label}}</th>
+					<th>{{character.spellList[0].bonusSpells.label}}</th>
+				</tr>
+				<tr data-ng-repeat="spellEntry in character.spellList">
+					<td>{{spellEntry.spellLvl.value}}</td>
+					<td><input size="2" data-ng-model="spellEntry.spellsKnown.value"></td>
+					<td><input size="2" data-ng-model="spellEntry.spellSaveDC.value"></td>
+					<td><input size="2" data-ng-model="spellEntry.spellsPerDay.value"></td>
+					<td><input size="2" data-ng-model="spellEntry.bonusSpells.value"></td>
+				</tr>
+			</table>
+
 		</div>
 	</div>
-	<div>
+	<div data-ng-if="character.spells">
 		<h1>Spell List</h1>
 		<div data-ng-repeat="spell in character.spells">
-			<h2>Spells</h2>
-			<div data-ng-repeat="field in spell">
-				{{field.label}}: <input data-ng-model="field.value">
-			</div>
+			Spell: <input data-ng-model="spell.name.value">
+			<em>{{spell.school.label}}</em><input data-ng-model="spell.school.value">;
+			<em>{{spell.level.label}}</em><input size="2" data-ng-model="spell.level.value">;
+			<em>{{spell.castingTime.label}}</em><input data-ng-model="spell.castingTime.value">;
+			<em>{{spell.components.label}}</em><input data-ng-model="spell.components.value">;
+			<em>{{spell.range.label}}</em><input data-ng-model="spell.range.value">;
+			<em>{{spell.target.label}}</em><input data-ng-model="spell.target.value">;
+			<em>{{spell.duration.label}}</em><input data-ng-model="spell.duration.value">;
+			<em>{{spell.savingThrow.label}}</em><input data-ng-model="spell.savingThrow.value">;
+			<em>{{spell.spellResistance.label}}</em><input data-ng-model="spell.spellResistance.value">;
+			<em>{{spell.notes.label}}</em><input data-ng-model="spell.notes.value">;
 		</div>
 	</div>
-	<div>
+	<!-- <div>
 		<h1>Resource</h1>
 		<div data-ng-repeat="field in character.resources">
 			{{field.label}}: <input data-ng-model="field.value">
 		</div>
 	</div>
-
+ -->
 </div>

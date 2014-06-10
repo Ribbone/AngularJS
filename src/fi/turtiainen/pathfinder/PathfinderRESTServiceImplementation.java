@@ -63,14 +63,14 @@ public class PathfinderRESTServiceImplementation {
 		if (characterCache.containsKey(character.nature.name)) {
 			characterCache.remove(character.nature.name);
 		}
-		return getCharacter(character.nature.name);
+		return getCharacter(character.nature.name.value);
 	}
 
 	public PathfinderCharacter postCharacterDummy(String name) {
 		if (name == null)
 			return null;
 		PathfinderCharacter character = new PathfinderCharacter();
-		character.nature.name = name;
+		character.nature.name.value = name;
 
 		try {
 			xmlwriter.writeCharacterToXMLFile(character);
@@ -82,7 +82,7 @@ public class PathfinderRESTServiceImplementation {
 		if (characterCache.containsKey(character.nature.name)) {
 			characterCache.remove(character.nature.name);
 		}
-		return getCharacter(character.nature.name);
+		return getCharacter(character.nature.name.value);
 	}
 
 	public List<String> getCharacterList() {
